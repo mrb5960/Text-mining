@@ -1,11 +1,9 @@
-#path need to be set here
-setwd('C:/Users/mrb5960/Downloads/rit-challenge-master/rit-challenge-master')
 library(tm)
 
 # PATH OF THE FOLDER CONTAINING THE INPUT FILES NEED TO BE SET BELOW
+# E.G. filenames <- list.files("C:/Users/XYZ/Documents/rit-challenge-master/rit-challenge-master/transaction-data", pattern="*.csv", full.names=TRUE)
 
-
-filenames <- list.files("C:/Users/mrb5960/Downloads/rit-challenge-master/rit-challenge-master/transaction-data", pattern="*.csv", full.names=TRUE)
+filenames <- list.files("     INPUT PATH GOES HERE----SHOULD CONTAIN THE .CSV FILES     ", pattern="*.csv", full.names=TRUE)
 
 # Function that calculates the frequently occuring words and generates a wordcloud
 # The images are stored in a output folder
@@ -45,7 +43,9 @@ library(wordcloud)
 library(RColorBrewer)
 
 # path where the output files are stored
-out <- paste('C:/Users/mrb5960/Downloads/rit-challenge-master/rit-challenge-master/Output/user_', id , '.jpeg', sep='')
+# E.G. out <- paste('C:/Users/XYZ/Documents/rit-challenge-master/rit-challenge-master/Output/user_', id , '.jpeg', sep='')
+# path goes before '/user_'
+out <- paste('       OUTPUT PATH GOES HERE/user_', id , '.jpeg', sep='')
 
 # used to store the image to the provided location
 jpeg(file = out)
